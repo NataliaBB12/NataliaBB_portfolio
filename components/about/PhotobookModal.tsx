@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Photo } from "@/lib/types";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const polaroidVariants = {
   enter: (dir: number) => ({
     opacity: 0,
@@ -19,7 +21,7 @@ const polaroidVariants = {
     scale: 1,
     transition: {
       duration: 0.45,
-      ease: [0.22, 1, 0.36, 1],
+      ease: EASE,
     },
   },
   exit: (dir: number) => ({
@@ -29,7 +31,7 @@ const polaroidVariants = {
     scale: 0.92,
     transition: {
       duration: 0.3,
-      ease: [0.22, 1, 0.36, 1],
+      ease: EASE,
     },
   }),
 };

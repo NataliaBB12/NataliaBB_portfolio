@@ -9,6 +9,8 @@ type CasePhotobookProps = {
   label?: string;
 };
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const slideVariants = {
   enter: (dir: number) => ({
     opacity: 0,
@@ -19,13 +21,13 @@ const slideVariants = {
     opacity: 1,
     x: 0,
     scale: 1,
-    transition: { duration: 0.38, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.38, ease: EASE },
   },
   exit: (dir: number) => ({
     opacity: 0,
     x: dir > 0 ? -60 : 60,
     scale: 0.96,
-    transition: { duration: 0.28, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.28, ease: EASE },
   }),
 };
 
