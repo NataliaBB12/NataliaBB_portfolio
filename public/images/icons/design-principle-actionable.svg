@@ -1,0 +1,40 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8612D"/>
+      <stop offset="100%" stop-color="#F5A070"/>
+    </radialGradient>
+  </defs>
+  <!-- Center circle -->
+  <circle cx="100" cy="100" r="18" fill="url(#sunGrad)"/>
+  <!-- Rays -->
+  <g fill="url(#sunGrad)">
+    <polygon points="100,5 96,80 104,80"/>
+    <polygon points="100,195 96,120 104,120"/>
+    <polygon points="5,100 80,96 80,104"/>
+    <polygon points="195,100 120,96 120,104"/>
+    <!-- Diagonal rays -->
+    <polygon points="33,33 82,88 88,82"/>
+    <polygon points="167,167 118,112 112,118"/>
+    <polygon points="167,33 112,82 118,88"/>
+    <polygon points="33,167 88,118 82,112"/>
+    <!-- In-between rays -->
+    <polygon points="65,15 86,84 92,80"/>
+    <polygon points="135,185 114,116 108,120"/>
+    <polygon points="15,135 84,114 80,108"/>
+    <polygon points="185,65 116,86 120,92"/>
+    <polygon points="135,15 114,84 108,80"/>
+    <polygon points="65,185 86,116 92,120"/>
+    <polygon points="15,65 84,86 80,92"/>
+    <polygon points="185,135 116,114 120,108"/>
+    <!-- Extra fine rays -->
+    <polygon points="48,10 84,86 90,82"/>
+    <polygon points="152,190 116,114 110,118"/>
+    <polygon points="10,152 86,116 82,110"/>
+    <polygon points="190,48 114,84 118,90"/>
+    <polygon points="152,10 116,86 110,82"/>
+    <polygon points="48,190 84,114 90,118"/>
+    <polygon points="10,48 86,84 82,90"/>
+    <polygon points="190,152 114,116 118,110"/>
+  </g>
+</svg>

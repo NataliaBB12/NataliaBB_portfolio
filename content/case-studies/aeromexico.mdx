@@ -1,0 +1,274 @@
+---
+title: "Redesigning the Airport Kiosk Check-in from 15 Steps to 6"
+client: "Aeroméxico"
+slug: "aeromexico"
+role: "Product Designer"
+platform: "Airport Kiosk"
+timeline: "7 months"
+headline: "How simplifying the most stressful moment of travel reduced task time by 30% and raised passenger satisfaction above benchmark for the first time"
+cardBg: "#D6E4F7"
+previewImage: "/images/aeromexico/preview.png"
+previewMaxH: 160
+tags: ["Travel", "Kiosk", "Check-in UX"]
+year: "2025"
+heroImage: "/images/aeromexico/hero.png"
+heroBg: "#D6E4F7"
+nextSlug: "mercado-credito"
+nextClient: "Mercado Pago"
+featured: true
+order: 1
+password: ""
+---
+
+## Context
+
+The check-in kiosk at Aeroméxico airports had 15 steps, an average baggage drop time of 10 minutes, and error messages that provided no actionable guidance. Passengers were left stranded at the worst possible moment of their journey.
+
+After a full customer journey audit spanning Planning, Booking, Check-in, and Day of Travel, I was brought in as Product Designer to simplify the core check-in flow: fewer steps, less friction, and a baggage drop experience passengers could complete in under 2 minutes.
+
+This wasn't a standard app redesign. We were designing for passengers under time pressure, on shared hardware, often in a noisy environment — which meant every decision had to favor clarity and speed over feature richness.
+
+**Collaborators:** Engineering · Airport Operations · SABRE Integration Team
+
+---
+
+## Problem Statement
+
+> "Passengers weren't failing because they didn't want to check in digitally. They were failing because the experience assumed a calm, focused user — and that user doesn't exist at an airport."
+
+<InsightCard label="HMW" accent>
+  **How might we simplify the airport kiosk check-in so passengers can complete it faster, with less confusion, and without needing agent assistance?**
+</InsightCard>
+
+---
+
+## Goals to Achieve
+
+<InsightCard label="Business Goal — Reduce Steps">
+  Reduce the number of check-in steps from 15 to a number passengers can complete without assistance. Cut average baggage drop time from 10 minutes, reducing queue pressure at peak hours.
+</InsightCard>
+
+<InsightCard label="Business Goal — Increase Digital Share">
+  Increase the share of passengers using digital kiosk check-in independently, reducing agent workload and frontline escalations.
+</InsightCard>
+
+<InsightCard label="Business Goal — Actionable Errors">
+  Replace generic error messages with clear, actionable guidance to reduce failed flows and agent-assisted recoveries.
+</InsightCard>
+
+<InsightCard label="User Goal — Speed & Control">
+  Complete check-in in under 2 minutes at the kiosk — even when running late. Know exactly what to do at every step, without needing to ask for help.
+</InsightCard>
+
+<InsightCard label="15 → 6 Steps · −30% Task Time · CES +0.8 · +75% Digital Share">
+  The four primary success metrics driving every design decision in this project.
+</InsightCard>
+
+<CaseImage
+  src="/images/aeromexico/user-flow.png"
+  alt="Kiosk Check-in User Flow — full journey mapping across all decision paths"
+  caption="Kiosk Check-in User Flow improvements view"
+  size="full"
+  clickable
+/>
+
+---
+
+## Research Insights
+
+Before touching a single screen, we benchmarked 18 airlines, spent 48+ hours doing on-site field research at the airport, and ran usability tests using Maze and guerrilla testing directly at the terminal.
+
+<InsightCard label="18 Airlines Benchmarked">
+  Studied best-in-class kiosk check-in patterns across 18 carriers to understand where Aeroméxico stood in the competitive landscape and what the upper bound of simplicity looked like.
+</InsightCard>
+
+<InsightCard label="48+ Hours — On-Site Field Research">
+  Conducted guerrilla usability testing and direct observation at the terminal — in real conditions, with real passengers, under real time pressure.
+</InsightCard>
+
+<InsightCard label="10 Edge Cases — Invisible in Documentation">
+  Field research uncovered 10 edge cases that never appeared in the existing documented flow or previous user stories. None of them would have surfaced in a lab setting.
+</InsightCard>
+
+<InsightCard label="70% — Friction Concentrated in Document Scanning">
+  70% of flow friction was concentrated in one micro-moment: document scanning. Not seat selection. Not fare review. One step driving most of the drop-off.
+</InsightCard>
+
+### The Key Insight That Shaped Every Decision
+
+> "Passengers in transit think in literal text. Under stress, visual metaphors fail. Users need exact instructions to feel in control."
+
+This mental model insight — derived from 48+ hours of field observation — drove how we rewrote every instruction screen in the new flow. Less clever, more clear.
+
+### Pain Points in the Existing Flow
+
+- Unclear validation messages when capturing reservation data
+- Excessively long reservation steps with repeated information
+- Generic error messages ("An error occurred") with no guidance on what to do next
+
+<CaseScreenRow
+  srcs="/images/aeromexico/field-1.png,/images/aeromexico/field-2.jpg,/images/aeromexico/field-3.jpg,/images/aeromexico/field-4.jpg"
+  alts="Passenger using kiosk,Airport check-in kiosk area,Kiosk screen — seat selection,Passenger entering reservation"
+  height="480"
+  width="360"
+  fit="cover"
+/>
+
+---
+
+## Challenges
+
+### #1 — A 15-Step Flow Designed for Ideal Conditions
+The original kiosk flow assumed a calm, focused user with time to read. In practice, passengers at check-in are stressed, carrying luggage, watching the clock, and often traveling in groups — a context where every unnecessary step compounds anxiety.
+
+### #2 — Document Scanning: The Invisible Drop-Off Point
+Field research revealed that 70% of friction happened during document scanning. Error messages were generic, provided no recovery path, and left passengers unsure whether to retry, ask for help, or abandon the kiosk entirely.
+
+### #3 — The SABRE Constraint: 5-Passenger Hard Limit
+The backend provider SABRE couldn't process check-in for more than 5 passengers per transaction. The original UI allowed up to 9 — creating a silent backend failure state with no clear error recovery.
+
+**How we solved it:** We capped the visible selection UI at 5 passengers per transaction and handled the technical reset silently in the backend. Passengers completing check-in for larger groups are guided through a second iteration of the same flow — without being exposed to the underlying limitation. The experience stays clean without requiring a SABRE-side change.
+
+---
+
+## Design Process
+
+We didn't redesign the entire 15-step flow at once. We identified the highest-friction micro-moment first, validated our solution there, and then restructured the surrounding flow around it — reducing risk and shipping faster.
+
+1. **Audit** — Mapped the end-to-end journey across Planning, Booking, Check-in, and Day of Travel to identify where kiosk friction sat within the broader passenger experience and what was in scope.
+
+2. **Field Research** — Conducted 48+ hours of guerrilla usability testing and direct observation at the terminal. Benchmarked 18 airlines. Discovered 10 edge cases invisible in the documented flow. Identified document scanning as the primary drop-off point.
+
+3. **Prioritize** — Rather than redesigning everything at once, prioritized the document scanning step first. Validated the improved experience, then restructured the surrounding flow around the validated anchor. This approach reduced delivery risk.
+
+4. **Design** — Reduced steps from 15 to 6 (domestic: 2). Standardized repeated information across screens. Moved validations earlier in the flow. Added persistent progress indicators. Rewrote all instruction copy using literal, direct language.
+
+5. **Constrain** — Collaborated with engineering to cap the passenger selection UI at 5 and handle backend resets silently. Defined a shared error taxonomy with actionable messages for every failure state.
+
+6. **Test & Iterate** — Ran usability tests via Maze and directly at the terminal. Validated the redesigned flow against edge cases and multiple passenger scenarios to prevent future support escalations.
+
+<CaseScreenRow
+  srcs="/images/aeromexico/kiosk-0.png,/images/aeromexico/kiosk-1.png,/images/aeromexico/kiosk-2.png,/images/aeromexico/kiosk-3.png,/images/aeromexico/kiosk-4.png,/images/aeromexico/kiosk-5.png,/images/aeromexico/kiosk-6.png"
+  alts="Kiosk screen 1,Kiosk screen 2,Kiosk screen 3,Kiosk screen 4,Kiosk screen 5,Kiosk screen 6,Kiosk screen 7"
+  height="480"
+  width="360"
+  clickable
+/>
+
+---
+
+## Solution Implemented
+
+A linear, predictable, and error-tolerant check-in flow — designed for passengers who are already stressed, not passengers who have time to explore.
+
+<InsightCard label="15 Steps Reduced to 6 (Domestic: 2)">
+  Eliminated redundant steps, consolidated repeated information screens, and restructured the flow to be linear and sequential. The domestic flow was reduced to just 2 steps — the minimum viable path to a boarding pass.
+</InsightCard>
+
+<InsightCard label="Document Scanning Redesigned as the Anchor Step">
+  Rewrote all instructions for the scanning step using literal, direct language — no metaphors, no icons without text, no ambiguity. Added contextual guidance that surfaces exactly when and where the user needs it, not before.
+</InsightCard>
+
+<InsightCard label="Actionable Error Messages Replacing Generic Failures">
+  Replaced every instance of "An error occurred" with a specific message explaining what failed, why it matters, and exactly what the passenger should do next. Defined a shared error taxonomy with engineering to keep messages consistent across all failure states.
+</InsightCard>
+
+<InsightCard label="5-Passenger Cap with Transparent Flow Looping">
+  Capped the visible selection UI at 5 passengers to match the SABRE backend limit. Larger groups are silently guided through a second iteration of the same flow — clean experience, no exposed technical constraint.
+</InsightCard>
+
+<InsightCard label="Progress Always Visible">
+  Added a persistent progress indicator across all steps so passengers always know where they are, how many steps remain, and that the system is working. Reduces anxiety and prevents premature abandonment.
+</InsightCard>
+
+<CaseScreenRow
+  srcs="/images/aeromexico/solution-1.png,/images/aeromexico/solution-2.png,/images/aeromexico/solution-3.png,/images/aeromexico/solution-4.png"
+  alts="Solution screen 1,Solution screen 2,Solution screen 3,Solution screen 4"
+  height="480"
+  width="360"
+  clickable
+/>
+
+---
+
+## User Feedback
+
+> "Literal instructions removed the need to ask for help. When instruction copy told passengers exactly what to do — not what the system was doing — they completed steps without pausing."
+
+<InsightCard label="Literal Instructions Removed the Need to Ask for Help">
+  The change was most visible during document scanning — the highest-friction point in the old flow. Passengers who received exact, literal instructions completed the step without pausing or looking for assistance.
+</InsightCard>
+
+<InsightCard label="Progress Visibility Reduced Abandonment Anxiety">
+  Passengers who could see where they were in the flow stayed in it. Those who couldn't often paused to look for help — even when the next step was straightforward. Visible progress is not cosmetic — it's functional.
+</InsightCard>
+
+<InsightCard label="Actionable Errors Kept Passengers in the Flow">
+  In the old experience, generic errors caused passengers to seek agent assistance immediately. In the redesigned flow, specific error messages with clear recovery instructions allowed most passengers to self-recover and continue without leaving the kiosk.
+</InsightCard>
+
+<InsightCard label="Accessibility Gap Surfaced Late">
+  Usability testing surfaced accessibility considerations that had not been included in the first research round. Users with visual impairments encountered barriers that required a separate design pass post-launch. This shaped how I'd approach future research.
+</InsightCard>
+
+<CaseScreenRow
+  srcs="/images/aeromexico/asientos-1.png,/images/aeromexico/asientos-2.png,/images/aeromexico/asientos-3.png,/images/aeromexico/asientos-4.png,/images/aeromexico/asientos-5.png,/images/aeromexico/asientos-6.png,/images/aeromexico/asientos-7.png"
+  alts="Seat selection 1,Seat selection 2,Seat selection 3,Seat selection 4,Seat selection 5,Seat selection 6,Seat selection 7"
+  height="480"
+  width="360"
+  clickable
+/>
+
+---
+
+## Results & Impact
+
+<InsightCard label="CES 3.8 → 4.6 — Above Internal Benchmark">
+  Above Aeroméxico's internal satisfaction benchmark — for the first time since the kiosk program launched.
+</InsightCard>
+
+<InsightCard label="−30% Task Time — 10 min → 7 min">
+  Baggage drop time reduced from 10 minutes to 7 — measurable relief on queue pressure at peak hours.
+</InsightCard>
+
+<InsightCard label="+75% Digital Check-in Share">
+  Growth in the share of passengers completing check-in independently at the kiosk — reducing agent workload significantly.
+</InsightCard>
+
+<InsightCard label="15 → 6 Steps (Domestic: 2)">
+  More than half of the original steps eliminated — with the domestic flow reduced to the absolute minimum viable path.
+</InsightCard>
+
+<InsightCard label="10 Edge Cases Resolved Before Launch">
+  Every edge case uncovered during field research was addressed in the redesign — preventing future escalations before they happened.
+</InsightCard>
+
+**What this proved:** Reducing steps and rewriting instructions with literal, direct language moved both the efficiency metric (TTV) and the emotional metric (CES) simultaneously. In a high-stress, shared-hardware context, clarity is the most powerful design lever.
+
+<CaseVideo
+  srcs="/images/aeromexico/demo-1.mov"
+  caption="Kiosk check-in flow — recorded at the terminal"
+  fit="natural"
+/>
+
+---
+
+## Reflections
+
+### The Context of Use Is a Design Constraint
+A kiosk is not a phone. Shared hardware, time pressure, noise, luggage, and group travel change what "good UX" means completely. Designing without internalizing that context produces beautiful flows that fail in practice.
+
+### Field Research Reveals What Documentation Cannot
+48+ hours on-site uncovered 10 edge cases and identified document scanning as the real drop-off point — none of which appeared in the existing flow documentation. Time in the field is not optional for physical-context products.
+
+### Start with the Micro-Moment, Not the Full Flow
+Redesigning the document scanning step first, validating it, and then restructuring the surrounding flow reduced delivery risk and let us ship faster. Focused bets beat comprehensive overhauls.
+
+### Technical Constraints Are a Design Brief
+The SABRE 5-passenger limit was a backend constraint with no timeline for resolution. Designing around it cleanly — without exposing the limitation to users — was a design decision, not a compromise. Constraints force clarity.
+
+### Accessibility Belongs in Round One
+Accessibility considerations surfaced late in testing and required a separate design pass post-launch. Including users with visual impairments from the first research round would have prevented this. Late accessibility is a form of rework.
+
+### Define Your Error Taxonomy on Day One
+Generic error messages were the most cited pain point in user research — and the last thing we fixed. Establishing a shared error taxonomy with the engineering team from week one would have made this a first-release improvement, not a post-launch catch-up.

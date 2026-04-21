@@ -1,0 +1,242 @@
+---
+title: "Redesigning Early Payment to Increase NPS"
+client: "Mercado Pago"
+slug: "mercado-credito"
+role: "Product Designer"
+platform: "iOS & Android"
+timeline: "3 months"
+headline: "How a clearer, step-by-step prepayment flow reduced confusion and cut support contact rate by 23%"
+cardBg: "#A1D4EF"
+previewImage: "/images/mercado-credito/preview.png"
+tags: ["Fintech", "Mobile", "Payment UX"]
+year: "2023"
+heroImage: "/images/mercado-credito/hero.png"
+heroBg: "#A1D4EF"
+nextSlug: "stori"
+nextClient: "Stori"
+featured: true
+order: 2
+password: ""
+heroWide: true
+---
+
+## Context
+
+Mercado Pago helps people and small businesses access loans when traditional banks reject them. For these users, confusion about how early payment works can directly impact their cash flow — and their trust in the product.
+
+When users misunderstand how prepaying installments works, they don't just feel uncertain. They contact support, lose confidence, and sometimes abandon the flow entirely — missing out on real interest savings.
+
+**Collaborators:** Product Lead · Content Design · Engineering · Collections Team
+
+---
+
+## Problem Statement
+
+> "Users weren't failing because they didn't want to prepay. They were failing because the experience never clearly explained what would happen when they did."
+
+<InsightCard label="HMW" accent>
+  **How might we decrease the contact rate due to a lack of understanding of the early payment flow?**
+</InsightCard>
+
+Given broader scope and development constraints, the first release focused on copy, onboarding, and the critical steps in the flow — while laying groundwork for deeper changes to admin and backend systems.
+
+---
+
+## Goals to Achieve
+
+<InsightCard label="Business Goal — Reduce Contact Rate">
+  Reduce contact rate (tickets, calls, chats) related to doubts and complaints about how early payment operates. Ship improvements incrementally — low dev cost, high clarity impact.
+</InsightCard>
+
+<InsightCard label="Business Goal — Self-Explaining Flows">
+  Improve the product's storytelling so flows explain themselves without needing support.
+</InsightCard>
+
+<InsightCard label="User Goal — Informed & In Control">
+  Help users feel informed and in control when prepaying installments. Make it clear what changes — next due date, amount, interest saved — before they commit.
+</InsightCard>
+
+
+---
+
+## Research Insights
+
+Before touching a single screen, we ran usability tests and analyzed product data to understand how people actually interacted with the prepayment flow — not how we assumed they did.
+
+<InsightCard label="1 of 5 Users — Clear Understanding">
+  Only 1 in 5 users clearly understood how early payment works and found the information clear.
+</InsightCard>
+
+<InsightCard label="4 of 5 Users — Scanning, Not Reading">
+  4 out of 5 users did not read all the content. They scanned screens and missed important details — including the rules that mattered most.
+</InsightCard>
+
+<InsightCard label="5 of 5 Users — The 'Skip a Month' Myth">
+  All users understood that prepayment saves interest — but many believed paying early would "skip a month" and that they'd pay again one month later. That misconception drove real support tickets.
+</InsightCard>
+
+<InsightCard label="3 of 5 Users — Variable Interest Misconception">
+  3 in 5 users assumed the interest savings calculation was fixed, when in reality it varies depending on the exact payment date.
+</InsightCard>
+
+### What the Data Really Meant
+
+**Users scan, they don't read.** Putting all critical explanations in a dense onboarding screen guarantees most users will miss them. Critical information needs to appear at the right step — not all at once upfront.
+
+**The real confusion is about consequences.** The core question wasn't "what is prepayment?" It was: "what happens to my next due date and amount if I prepay today?" Users needed a before/after view, not a definition.
+
+**Financial decisions need low cognitive load.** When people deal with debt and interest, they're more sensitive to information overload. Too much at once quickly becomes overwhelming — and hurts trust.
+
+---
+
+## Challenges
+
+### #1 — Friction Right After Intent
+Right after tapping the payment button, users hit a full-screen onboarding that tried to explain the entire prepayment concept at once. Instead of feeling helpful, this "brake screen" interrupted the sense of immediacy and felt like a barrier — especially for users who just wanted to pay and move on.
+
+### #2 — Critical Information in the Wrong Place
+Most of the explanation about how prepayment works lived only in that initial onboarding. Because users scanned and dismissed it quickly, they entered the flow without understanding the key rules about dates and interest — setting up confusion for every step that followed.
+
+### #3 — Only One Visible Journey
+The interface exposed essentially one path for early payment, regardless of what the user actually wanted to do. This made it hard to compare options or choose which installments to advance — reinforcing the misconception that prepaying "skips a month" rather than recalculating amounts and dates.
+
+**Design Principle Applied:** These problems are textbook examples of Hick's Law and high cognitive load — too many concepts thrown at users at once, in the wrong moment and format for a high-stakes financial decision.
+
+<CaseScreenRow
+  srcs="/images/mercado-credito/challenge-1.png,/images/mercado-credito/challenge-2.png"
+  alts="Pago anticipado — onboarding screen,Revisa tu pago anticipado — confirmation screen"
+  height="640"
+  width="360"
+/>
+
+---
+
+## Design Process
+
+We worked within tight development constraints, prioritizing high-impact, low-effort improvements that could ship quickly — while still moving the needle on contact rate and NPS.
+
+1. **Research** — Ran usability tests on the existing flow and analyzed product data to identify where and why users were getting confused or abandoning. Observed real behavior, not assumptions.
+
+2. **Define** — Synthesized findings into three core UX problems. Validated user journeys against multiple "what if" scenarios to map edge cases and reduce the risk of future support tickets.
+
+3. **Ideate** — Led a workshop with the broader team to explore different focus areas. Design critiques broadened the solution space and helped balance user clarity, business goals, and implementation cost.
+
+4. **Design** — Applied progressive disclosure principles — distributing key information across steps instead of one dense screen. Redesigned the flow to show users a transparent before/after view of their installments.
+
+5. **Validate** — Conducted early validations with the development team to ensure solutions were cost-effective to build. Ran usability tests on the redesigned flow — confirming users understood core mechanics better even if they didn't read every word.
+
+6. **Ship** — First release focused on onboarding redesign, copy improvements, and critical flow steps — shipping changes incrementally so development could implement them without blocking other platform work.
+
+---
+
+<CaseImage
+  src="/images/mercado-credito/flow-diagram.png"
+  alt="Payment flow decision tree — mapping all user paths through the early payment experience"
+  caption="User flow mapping — all decision paths across the early payment journey"
+  size="full"
+  clickable
+/>
+
+<CaseScreenRow
+  srcs="/images/mercado-credito/before.png,/images/mercado-credito/after.png"
+  alts="Before — original onboarding screen,After — redesigned onboarding screen"
+  labels="Before,After"
+  height="640"
+  width="300"
+/>
+
+## Solution Implemented
+
+We reworked the entire user flow to make early payment feel transparent, step-by-step, and user-led — replacing a dense onboarding with contextual guidance delivered at the right moment.
+
+<InsightCard label="Progressive Disclosure of Payment Information">
+  Distributed explanations about interest savings and date changes across several steps in smaller, contextual chunks — so the most important information appears when it's actually relevant, not all at once upfront.
+</InsightCard>
+
+<InsightCard label="Transparent Before/After Installment View">
+  Showed users exactly how paying early changes their installments — a side-by-side view that directly addressed the "skips a month" misconception and replaced it with a clear picture of what changes and what doesn't.
+</InsightCard>
+
+<InsightCard label="Manual Installment Selection">
+  Let users explicitly choose which installment(s) they want to advance, from back to front. This clarified that prepayment is an active choice — not an unexpected change to their regular payment behavior.
+</InsightCard>
+
+<InsightCard label="Clear Confirmation & Summary Screen">
+  Added a final screen summarizing how much they're paying now, how much interest they're saving, and what their new next due date and amount will be — so users could confirm with confidence, not uncertainty.
+</InsightCard>
+
+<CaseScreenRow
+  srcs="/images/mercado-credito/solution-1.png,/images/mercado-credito/solution-2.png,/images/mercado-credito/solution-3.png,/images/mercado-credito/solution-4.png,/images/mercado-credito/solution-5.png"
+  alts="Solution screen 1,Solution screen 2,Solution screen 3,Solution screen 4,Solution screen 5"
+  height="800"
+  width="360"
+/>
+
+---
+
+<CaseScreenRow
+  srcs="/images/mercado-credito/flow-1.png,/images/mercado-credito/flow-2.png,/images/mercado-credito/flow-4.png,/images/mercado-credito/flow-3.png,/images/mercado-credito/flow-5.png,/images/mercado-credito/flow-6.png"
+  alts="Flow screen 1,Flow screen 2,Flow screen 4,Flow screen 3,Flow screen 5,Flow screen 6"
+  height="800"
+  width="360"
+/>
+
+## User Feedback
+
+> "Many users still didn't read every word — but they now understood the core mechanics better, because the most important information appeared at the right moment, in the right place."
+
+<InsightCard label="Users Scanned Less Anxiously">
+  With key information distributed across steps, users didn't feel ambushed by a wall of text. The flow felt lighter even when the content was the same.
+</InsightCard>
+
+<InsightCard label="Fewer Questions About the 'Skip a Month' Myth">
+  The before/after view addressed the most common misconception directly — at the moment it was most relevant. Users saw what changed before they committed.
+</InsightCard>
+
+<InsightCard label="Confirmation Screen Built Confidence">
+  Users who reached the final summary reported feeling sure of what they were doing — a sharp contrast to the old flow, where uncertainty often led to support calls.
+</InsightCard>
+
+---
+
+## Results & Impact
+
+<InsightCard label="↓23% — Contact Rate Reduction">
+  Decrease in contact rate related to prepayment doubts — the primary business target, hit within a single quarter.
+</InsightCard>
+
+<InsightCard label="+3% — NPS Improvement">
+  Improvement in payment-related NPS after the redesign.
+</InsightCard>
+
+<InsightCard label="Fast Incremental Delivery">
+  First release shipped without blocking platform dev — proving that high-impact changes don't require heavy development cost.
+</InsightCard>
+
+<InsightCard label="↓ Cognitive Load">
+  Reduced through progressive disclosure across steps — replacing a single dense screen with contextual guidance at every moment.
+</InsightCard>
+
+**What this proved:** Behavior change doesn't always require a full product overhaul. Targeted copy improvements, progressive onboarding, and a clearer confirmation step moved the needle on both contact rate and NPS — within a single quarter.
+
+---
+
+## Reflections
+
+### Communication Is Part of the Product
+Clear, aligned communication between product, design, content, and stakeholders is essential when dealing with money and regulation. Copy and flows alone can't fix misaligned expectations at the team level.
+
+### Hypotheses Before Shipping
+When data is missing, it's better to make assumptions explicit and validate them step by step than to iterate blindly in production. Naming the assumption is half the work.
+
+### Designing Within Constraints Is Still Designing
+Technical and regulatory constraints forced prioritization of low-effort, high-impact improvements — copy, onboarding, flow steps — that could ship quickly while still moving the needle. Constraints are a creative brief, not a blocker.
+
+### Mapping Edge Cases Builds Trust
+Validating the new flow against multiple scenarios and "what if" cases helped prevent surprises for users and reduced the risk of future support tickets. Edge cases aren't edge cases for the people who hit them.
+
+### Collaboration Amplifies Solutions
+Workshops and design critiques with the team broadened the range of ideas and led to a solution that balanced user clarity, business goals, and implementation cost. The best ideas didn't come from a single designer working alone.
+
+### Leading Workshops Expanded My Perspective
+Being tasked with facilitating the brainstorming session gave me a broader lens on how to rethink solutions — and strengthened my ability to align a cross-functional team around a shared direction.

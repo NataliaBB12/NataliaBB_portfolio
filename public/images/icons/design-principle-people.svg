@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="starGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5A070"/>
+      <stop offset="100%" stop-color="#F06060"/>
+    </radialGradient>
+  </defs>
+  <!-- 4-pointed star -->
+  <path d="
+    M100 5
+    C105 60, 115 75, 195 100
+    C115 125, 105 140, 100 195
+    C95 140, 85 125, 5 100
+    C85 75, 95 60, 100 5Z
+  " fill="url(#starGrad)"/>
+</svg>
