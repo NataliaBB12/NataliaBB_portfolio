@@ -11,14 +11,10 @@ import CasePhotobook from "./CasePhotobook";
 import CaseComparisonSlider from "./CaseComparisonSlider";
 import CaseScreenRow from "./CaseScreenRow";
 import CaseVideo from "./CaseVideo";
+import TranslatedH2 from "./TranslatedH2";
 
 export const mdxComponents: MDXComponents = {
-  h2: (props) => (
-    <h2
-      className="font-sans text-2xl font-bold text-text-primary border-b border-border-subtle pb-3 mt-16 mb-6"
-      {...props}
-    />
-  ),
+  h2: (props) => <TranslatedH2>{props.children as string}</TranslatedH2>,
   h3: (props) => (
     <h3
       className="font-sans text-lg font-semibold text-text-primary mt-8 mb-3"

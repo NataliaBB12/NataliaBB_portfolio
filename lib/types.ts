@@ -21,6 +21,8 @@ export type CaseStudy = {
   password?: string;
   heroWide?: boolean;
   previewMaxH?: number;
+  titleEs?: string;
+  headlineEs?: string;
 };
 
 export type Photo = {

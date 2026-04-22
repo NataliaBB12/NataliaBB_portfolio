@@ -88,5 +88,17 @@ export const en = {
   },
   caseStudyPage: {
     nextProject: "More to Explore",
+    sections: {
+      "Context": "Context",
+      "Problem Statement": "Problem Statement",
+      "Goals to Achieve": "Goals to Achieve",
+      "Research Insights": "Research Insights",
+      "Challenges": "Challenges",
+      "Design Process": "Design Process",
+      "Solution Implemented": "Solution Implemented",
+      "User Feedback": "User Feedback",
+      "Results & Impact": "Results & Impact",
+      "Reflections": "Reflections",
+    },
   },
 };

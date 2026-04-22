@@ -3,12 +3,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CaseStudy } from "@/lib/types";
+import { useI18n } from "@/lib/i18n";
 
 export default function CaseStudyHeader({
   study,
 }: {
   study: CaseStudy;
 }) {
+  const { locale } = useI18n();
+  const displayTitle = locale === "es" && study.titleEs ? study.titleEs : study.title;
+
   return (
     <section
       className="relative w-full pt-24 pb-16 px-6 lg:px-24"
@@ -69,7 +73,7 @@ export default function CaseStudyHeader({
           </span>
 
           <h1 className="font-sans text-4xl lg:text-5xl font-extrabold tracking-tight text-text-primary mb-6">
-            {study.title}
+            {displayTitle}
           </h1>
 
           <div className="flex flex-wrap items-center gap-3 text-sm text-text-secondary mb-4">

@@ -87,6 +87,18 @@ export const es = {
     },
   },
   caseStudyPage: {
-    nextProject: "M\u00e1s por explorar",
+    nextProject: "Más por explorar",
+    sections: {
+      "Context": "Contexto",
+      "Problem Statement": "Planteamiento del Problema",
+      "Goals to Achieve": "Objetivos",
+      "Research Insights": "Hallazgos de Investigación",
+      "Challenges": "Desafíos",
+      "Design Process": "Proceso de Diseño",
+      "Solution Implemented": "Solución Implementada",
+      "User Feedback": "Retroalimentación de Usuarios",
+      "Results & Impact": "Resultados e Impacto",
+      "Reflections": "Reflexiones",
+    },
   },
 };

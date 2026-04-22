@@ -8,14 +8,17 @@ export default function NextProject({
   slug,
   client,
   headline,
+  headlineEs,
   cardBg,
 }: {
   slug: string;
   client: string;
   headline: string;
+  headlineEs?: string;
   cardBg: string;
 }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const displayHeadline = locale === "es" && headlineEs ? headlineEs : headline;
 
   return (
     <section className="px-6 lg:px-24 py-16 border-t border-border-subtle">
@@ -42,7 +45,7 @@ export default function NextProject({
                 {client}
               </span>
               <span className="text-lg font-semibold text-text-primary group-hover:text-accent-coral transition-colors">
-                {headline}
+                {displayHeadline}
               </span>
             </div>
             <motion.span

@@ -50,6 +50,7 @@ export default async function CaseStudyPage({ params }: Props) {
           slug={nextStudy.slug}
           client={nextStudy.client}
           headline={nextStudy.title}
+          headlineEs={nextStudy.titleEs}
           cardBg={nextStudy.cardBg}
         />
       )}
