@@ -12,15 +12,13 @@ import CaseComparisonSlider from "./CaseComparisonSlider";
 import CaseScreenRow from "./CaseScreenRow";
 import CaseVideo from "./CaseVideo";
 import TranslatedH2 from "./TranslatedH2";
+import TranslatedH3 from "./TranslatedH3";
+import T from "./T";
+import TQ from "./TQ";
 
 export const mdxComponents: MDXComponents = {
   h2: (props) => <TranslatedH2>{props.children as string}</TranslatedH2>,
-  h3: (props) => (
-    <h3
-      className="font-sans text-lg font-semibold text-text-primary mt-8 mb-3"
-      {...props}
-    />
-  ),
+  h3: (props) => <TranslatedH3>{props.children as string}</TranslatedH3>,
   p: (props) => (
     <p
       className="font-sans text-base leading-relaxed text-text-secondary mb-4"
@@ -59,4 +57,6 @@ export const mdxComponents: MDXComponents = {
   CaseComparisonSlider: CaseComparisonSlider as any,
   CaseScreenRow: CaseScreenRow as any,
   CaseVideo: CaseVideo as any,
+  T: T as any,
+  TQ: TQ as any,
 };

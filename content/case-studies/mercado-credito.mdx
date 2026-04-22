@@ -24,37 +24,37 @@ heroWide: true
 
 ## Context
 
-Mercado Pago helps people and small businesses access loans when traditional banks reject them. For these users, confusion about how early payment works can directly impact their cash flow — and their trust in the product.
+<T en="Mercado Pago helps people and small businesses access loans when traditional banks reject them. For these users, confusion about how early payment works can directly impact their cash flow — and their trust in the product." es="Mercado Pago ayuda a personas y pequeñas empresas a acceder a préstamos cuando los bancos tradicionales los rechazan. Para estos usuarios, la confusión sobre cómo funciona el pago anticipado puede impactar directamente su flujo de caja — y su confianza en el producto." />
 
-When users misunderstand how prepaying installments works, they don't just feel uncertain. They contact support, lose confidence, and sometimes abandon the flow entirely — missing out on real interest savings.
+<T en="When users misunderstand how prepaying installments works, they don't just feel uncertain. They contact support, lose confidence, and sometimes abandon the flow entirely — missing out on real interest savings." es="Cuando los usuarios malinterpretan cómo funciona el prepago de cuotas, no solo se sienten inseguros. Contactan a soporte, pierden confianza y a veces abandonan el flujo por completo — perdiéndose ahorros reales en intereses." />
 
-**Collaborators:** Product Lead · Content Design · Engineering · Collections Team
+<T en="**Collaborators:** Product Lead · Content Design · Engineering · Collections Team" es="**Colaboradores:** Product Lead · Diseño de Contenido · Ingeniería · Equipo de Cobranza" />
 
 ---
 
 ## Problem Statement
 
-> "Users weren't failing because they didn't want to prepay. They were failing because the experience never clearly explained what would happen when they did."
+<TQ en="Users weren't failing because they didn't want to prepay. They were failing because the experience never clearly explained what would happen when they did." es="Los usuarios no fallaban porque no quisieran prepagar. Fallaban porque la experiencia nunca explicó claramente qué pasaría cuando lo hicieran." />
 
-<InsightCard label="HMW" accent>
+<InsightCard label="HMW" labelEs="HMW" es="¿Cómo podríamos reducir la tasa de contacto debida a la falta de comprensión del flujo de pago anticipado?" accent>
   **How might we decrease the contact rate due to a lack of understanding of the early payment flow?**
 </InsightCard>
 
-Given broader scope and development constraints, the first release focused on copy, onboarding, and the critical steps in the flow — while laying groundwork for deeper changes to admin and backend systems.
+<T en="Given broader scope and development constraints, the first release focused on copy, onboarding, and the critical steps in the flow — while laying groundwork for deeper changes to admin and backend systems." es="Dadas las restricciones de alcance y desarrollo, la primera versión se enfocó en el copy, el onboarding y los pasos críticos del flujo — mientras se sentaban las bases para cambios más profundos en los sistemas de administración y backend." />
 
 ---
 
 ## Goals to Achieve
 
-<InsightCard label="Business Goal — Reduce Contact Rate">
+<InsightCard label="Business Goal — Reduce Contact Rate" labelEs="Objetivo de Negocio — Reducir Tasa de Contacto" es="Reducir la tasa de contacto (tickets, llamadas, chats) relacionados con dudas y quejas sobre cómo opera el pago anticipado. Lanzar mejoras de forma incremental — bajo costo de desarrollo, alto impacto en claridad.">
   Reduce contact rate (tickets, calls, chats) related to doubts and complaints about how early payment operates. Ship improvements incrementally — low dev cost, high clarity impact.
 </InsightCard>
 
-<InsightCard label="Business Goal — Self-Explaining Flows">
+<InsightCard label="Business Goal — Self-Explaining Flows" labelEs="Objetivo de Negocio — Flujos Auto-Explicativos" es="Mejorar el storytelling del producto para que los flujos se expliquen solos sin necesitar soporte.">
   Improve the product's storytelling so flows explain themselves without needing support.
 </InsightCard>
 
-<InsightCard label="User Goal — Informed & In Control">
+<InsightCard label="User Goal — Informed & In Control" labelEs="Objetivo de Usuario — Informado y en Control" es="Ayudar a los usuarios a sentirse informados y en control al prepagar cuotas. Que quede claro qué cambia — próxima fecha de vencimiento, monto, interés ahorrado — antes de comprometerse.">
   Help users feel informed and in control when prepaying installments. Make it clear what changes — next due date, amount, interest saved — before they commit.
 </InsightCard>
 
@@ -63,46 +63,46 @@ Given broader scope and development constraints, the first release focused on co
 
 ## Research Insights
 
-Before touching a single screen, we ran usability tests and analyzed product data to understand how people actually interacted with the prepayment flow — not how we assumed they did.
+<T en="Before touching a single screen, we ran usability tests and analyzed product data to understand how people actually interacted with the prepayment flow — not how we assumed they did." es="Antes de tocar una sola pantalla, realizamos pruebas de usabilidad y analizamos datos del producto para entender cómo la gente interactuaba realmente con el flujo de pago anticipado — no cómo asumíamos que lo hacían." />
 
-<InsightCard label="1 of 5 Users — Clear Understanding">
+<InsightCard label="1 of 5 Users — Clear Understanding" labelEs="1 de 5 Usuarios — Comprensión Clara" es="Solo 1 de cada 5 usuarios entendía claramente cómo funciona el pago anticipado y encontraba la información clara.">
   Only 1 in 5 users clearly understood how early payment works and found the information clear.
 </InsightCard>
 
-<InsightCard label="4 of 5 Users — Scanning, Not Reading">
+<InsightCard label="4 of 5 Users — Scanning, Not Reading" labelEs="4 de 5 Usuarios — Escanean, No Leen" es="4 de cada 5 usuarios no leyeron todo el contenido. Escaneaban las pantallas y se perdían detalles importantes — incluyendo las reglas que más importaban.">
   4 out of 5 users did not read all the content. They scanned screens and missed important details — including the rules that mattered most.
 </InsightCard>
 
-<InsightCard label="5 of 5 Users — The 'Skip a Month' Myth">
+<InsightCard label="5 of 5 Users — The 'Skip a Month' Myth" labelEs="5 de 5 Usuarios — El Mito de 'Saltarse un Mes'" es="Todos los usuarios entendían que el prepago ahorra intereses — pero muchos creían que pagar antes 'saltaría un mes' y que volverían a pagar un mes después. Ese malentendido generaba tickets de soporte reales.">
   All users understood that prepayment saves interest — but many believed paying early would "skip a month" and that they'd pay again one month later. That misconception drove real support tickets.
 </InsightCard>
 
-<InsightCard label="3 of 5 Users — Variable Interest Misconception">
+<InsightCard label="3 of 5 Users — Variable Interest Misconception" labelEs="3 de 5 Usuarios — Malentendido sobre el Interés Variable" es="3 de cada 5 usuarios asumían que el cálculo del ahorro en intereses era fijo, cuando en realidad varía dependiendo de la fecha exacta de pago.">
   3 in 5 users assumed the interest savings calculation was fixed, when in reality it varies depending on the exact payment date.
 </InsightCard>
 
 ### What the Data Really Meant
 
-**Users scan, they don't read.** Putting all critical explanations in a dense onboarding screen guarantees most users will miss them. Critical information needs to appear at the right step — not all at once upfront.
+<T en="**Users scan, they don't read.** Putting all critical explanations in a dense onboarding screen guarantees most users will miss them. Critical information needs to appear at the right step — not all at once upfront." es="**Los usuarios escanean, no leen.** Poner todas las explicaciones críticas en una pantalla de onboarding densa garantiza que la mayoría de los usuarios las pasará por alto. La información crítica debe aparecer en el paso correcto — no toda de golpe al inicio." />
 
-**The real confusion is about consequences.** The core question wasn't "what is prepayment?" It was: "what happens to my next due date and amount if I prepay today?" Users needed a before/after view, not a definition.
+<T en="**The real confusion is about consequences.** The core question wasn't 'what is prepayment?' It was: 'what happens to my next due date and amount if I prepay today?' Users needed a before/after view, not a definition." es="**La confusión real es sobre las consecuencias.** La pregunta central no era '¿qué es el prepago?' Era: '¿qué pasa con mi próxima fecha y monto de pago si prepago hoy?' Los usuarios necesitaban una vista de antes/después, no una definición." />
 
-**Financial decisions need low cognitive load.** When people deal with debt and interest, they're more sensitive to information overload. Too much at once quickly becomes overwhelming — and hurts trust.
+<T en="**Financial decisions need low cognitive load.** When people deal with debt and interest, they're more sensitive to information overload. Too much at once quickly becomes overwhelming — and hurts trust." es="**Las decisiones financieras necesitan poca carga cognitiva.** Cuando las personas lidian con deuda e intereses, son más sensibles a la sobrecarga de información. Demasiado a la vez se vuelve abrumador rápidamente — y daña la confianza." />
 
 ---
 
 ## Challenges
 
 ### #1 — Friction Right After Intent
-Right after tapping the payment button, users hit a full-screen onboarding that tried to explain the entire prepayment concept at once. Instead of feeling helpful, this "brake screen" interrupted the sense of immediacy and felt like a barrier — especially for users who just wanted to pay and move on.
+<T en="Right after tapping the payment button, users hit a full-screen onboarding that tried to explain the entire prepayment concept at once. Instead of feeling helpful, this 'brake screen' interrupted the sense of immediacy and felt like a barrier — especially for users who just wanted to pay and move on." es="Justo después de tocar el botón de pago, los usuarios se topaban con un onboarding de pantalla completa que intentaba explicar todo el concepto de prepago de una vez. En lugar de sentirse útil, esta 'pantalla de freno' interrumpía la sensación de inmediatez y se sentía como una barrera — especialmente para los usuarios que solo querían pagar y continuar." />
 
 ### #2 — Critical Information in the Wrong Place
-Most of the explanation about how prepayment works lived only in that initial onboarding. Because users scanned and dismissed it quickly, they entered the flow without understanding the key rules about dates and interest — setting up confusion for every step that followed.
+<T en="Most of the explanation about how prepayment works lived only in that initial onboarding. Because users scanned and dismissed it quickly, they entered the flow without understanding the key rules about dates and interest — setting up confusion for every step that followed." es="La mayor parte de la explicación sobre cómo funciona el prepago solo existía en ese onboarding inicial. Como los usuarios lo escaneaban y descartaban rápidamente, entraban al flujo sin entender las reglas clave sobre fechas e intereses — generando confusión en cada paso siguiente." />
 
 ### #3 — Only One Visible Journey
-The interface exposed essentially one path for early payment, regardless of what the user actually wanted to do. This made it hard to compare options or choose which installments to advance — reinforcing the misconception that prepaying "skips a month" rather than recalculating amounts and dates.
+<T en="The interface exposed essentially one path for early payment, regardless of what the user actually wanted to do. This made it hard to compare options or choose which installments to advance — reinforcing the misconception that prepaying 'skips a month' rather than recalculating amounts and dates." es="La interfaz exponía esencialmente un solo camino para el pago anticipado, independientemente de lo que el usuario realmente quería hacer. Esto dificultaba comparar opciones o elegir qué cuotas adelantar — reforzando el malentendido de que prepagar 'salta un mes' en lugar de recalcular montos y fechas." />
 
-**Design Principle Applied:** These problems are textbook examples of Hick's Law and high cognitive load — too many concepts thrown at users at once, in the wrong moment and format for a high-stakes financial decision.
+<T en="**Design Principle Applied:** These problems are textbook examples of Hick's Law and high cognitive load — too many concepts thrown at users at once, in the wrong moment and format for a high-stakes financial decision." es="**Principio de Diseño Aplicado:** Estos problemas son ejemplos de manual de la Ley de Hick y alta carga cognitiva — demasiados conceptos lanzados al usuario a la vez, en el momento y formato equivocados para una decisión financiera de alto impacto." />
 
 <CaseScreenRow
   srcs="/images/mercado-credito/challenge-1.png,/images/mercado-credito/challenge-2.png"
@@ -115,7 +115,7 @@ The interface exposed essentially one path for early payment, regardless of what
 
 ## Design Process
 
-We worked within tight development constraints, prioritizing high-impact, low-effort improvements that could ship quickly — while still moving the needle on contact rate and NPS.
+<T en="We worked within tight development constraints, prioritizing high-impact, low-effort improvements that could ship quickly — while still moving the needle on contact rate and NPS." es="Trabajamos dentro de restricciones de desarrollo ajustadas, priorizando mejoras de alto impacto y bajo esfuerzo que pudieran lanzarse rápidamente — sin dejar de mover la aguja en la tasa de contacto y el NPS." />
 
 1. **Research** — Ran usability tests on the existing flow and analyzed product data to identify where and why users were getting confused or abandoning. Observed real behavior, not assumptions.
 
@@ -149,21 +149,21 @@ We worked within tight development constraints, prioritizing high-impact, low-ef
 
 ## Solution Implemented
 
-We reworked the entire user flow to make early payment feel transparent, step-by-step, and user-led — replacing a dense onboarding with contextual guidance delivered at the right moment.
+<T en="We reworked the entire user flow to make early payment feel transparent, step-by-step, and user-led — replacing a dense onboarding with contextual guidance delivered at the right moment." es="Rediseñamos todo el flujo de usuario para que el pago anticipado se sintiera transparente, paso a paso y guiado por el usuario — reemplazando un onboarding denso con orientación contextual entregada en el momento correcto." />
 
-<InsightCard label="Progressive Disclosure of Payment Information">
+<InsightCard label="Progressive Disclosure of Payment Information" labelEs="Divulgación Progresiva de la Información de Pago" es="Las explicaciones sobre el ahorro en intereses y los cambios de fecha se distribuyeron en varios pasos en fragmentos más pequeños y contextuales — para que la información más importante aparezca cuando es realmente relevante, no toda de golpe al inicio.">
   Distributed explanations about interest savings and date changes across several steps in smaller, contextual chunks — so the most important information appears when it's actually relevant, not all at once upfront.
 </InsightCard>
 
-<InsightCard label="Transparent Before/After Installment View">
+<InsightCard label="Transparent Before/After Installment View" labelEs="Vista Transparente Antes/Después de las Cuotas" es="Se mostró a los usuarios exactamente cómo el pago anticipado cambia sus cuotas — una vista comparativa que abordó directamente el malentendido de 'saltarse un mes' y lo reemplazó con una imagen clara de qué cambia y qué no.">
   Showed users exactly how paying early changes their installments — a side-by-side view that directly addressed the "skips a month" misconception and replaced it with a clear picture of what changes and what doesn't.
 </InsightCard>
 
-<InsightCard label="Manual Installment Selection">
+<InsightCard label="Manual Installment Selection" labelEs="Selección Manual de Cuotas" es="Se permitió a los usuarios elegir explícitamente qué cuota(s) quieren adelantar, de atrás hacia adelante. Esto aclaró que el prepago es una elección activa — no un cambio inesperado en su comportamiento de pago regular.">
   Let users explicitly choose which installment(s) they want to advance, from back to front. This clarified that prepayment is an active choice — not an unexpected change to their regular payment behavior.
 </InsightCard>
 
-<InsightCard label="Clear Confirmation & Summary Screen">
+<InsightCard label="Clear Confirmation & Summary Screen" labelEs="Pantalla de Confirmación y Resumen Clara" es="Se añadió una pantalla final que resume cuánto están pagando ahora, cuánto interés están ahorrando y cuál será su nueva próxima fecha y monto de vencimiento — para que los usuarios puedan confirmar con confianza, no con incertidumbre.">
   Added a final screen summarizing how much they're paying now, how much interest they're saving, and what their new next due date and amount will be — so users could confirm with confidence, not uncertainty.
 </InsightCard>
 
@@ -185,17 +185,17 @@ We reworked the entire user flow to make early payment feel transparent, step-by
 
 ## User Feedback
 
-> "Many users still didn't read every word — but they now understood the core mechanics better, because the most important information appeared at the right moment, in the right place."
+<TQ en="Many users still didn't read every word — but they now understood the core mechanics better, because the most important information appeared at the right moment, in the right place." es="Muchos usuarios aún no leían cada palabra — pero ahora entendían mejor la mecánica central, porque la información más importante aparecía en el momento correcto, en el lugar correcto." />
 
-<InsightCard label="Users Scanned Less Anxiously">
+<InsightCard label="Users Scanned Less Anxiously" labelEs="Los Usuarios Escanearon con Menos Ansiedad" es="Con la información clave distribuida en pasos, los usuarios no se sintieron sorprendidos por un muro de texto. El flujo se sintió más ligero incluso cuando el contenido era el mismo.">
   With key information distributed across steps, users didn't feel ambushed by a wall of text. The flow felt lighter even when the content was the same.
 </InsightCard>
 
-<InsightCard label="Fewer Questions About the 'Skip a Month' Myth">
+<InsightCard label="Fewer Questions About the 'Skip a Month' Myth" labelEs="Menos Preguntas sobre el Mito de 'Saltarse un Mes'" es="La vista antes/después abordó el malentendido más común directamente — en el momento en que era más relevante. Los usuarios vieron qué cambiaba antes de comprometerse.">
   The before/after view addressed the most common misconception directly — at the moment it was most relevant. Users saw what changed before they committed.
 </InsightCard>
 
-<InsightCard label="Confirmation Screen Built Confidence">
+<InsightCard label="Confirmation Screen Built Confidence" labelEs="La Pantalla de Confirmación Generó Confianza" es="Los usuarios que llegaron al resumen final reportaron sentirse seguros de lo que estaban haciendo — un contraste marcado con el flujo anterior, donde la incertidumbre frecuentemente llevaba a llamadas de soporte.">
   Users who reached the final summary reported feeling sure of what they were doing — a sharp contrast to the old flow, where uncertainty often led to support calls.
 </InsightCard>
 
@@ -203,23 +203,23 @@ We reworked the entire user flow to make early payment feel transparent, step-by
 
 ## Results & Impact
 
-<InsightCard label="↓23% — Contact Rate Reduction">
+<InsightCard label="↓23% — Contact Rate Reduction" labelEs="↓23% — Reducción en Tasa de Contacto" es="Reducción en la tasa de contacto relacionada con dudas sobre prepagos — el objetivo principal de negocio, alcanzado en un solo trimestre.">
   Decrease in contact rate related to prepayment doubts — the primary business target, hit within a single quarter.
 </InsightCard>
 
-<InsightCard label="+3% — NPS Improvement">
+<InsightCard label="+3% — NPS Improvement" labelEs="+3% — Mejora en NPS" es="Mejora en el NPS relacionado con pagos después del rediseño.">
   Improvement in payment-related NPS after the redesign.
 </InsightCard>
 
-<InsightCard label="Fast Incremental Delivery">
+<InsightCard label="Fast Incremental Delivery" labelEs="Entrega Incremental Rápida" es="La primera versión se lanzó sin bloquear el desarrollo de la plataforma — demostrando que los cambios de alto impacto no requieren un alto costo de desarrollo.">
   First release shipped without blocking platform dev — proving that high-impact changes don't require heavy development cost.
 </InsightCard>
 
-<InsightCard label="↓ Cognitive Load">
+<InsightCard label="↓ Cognitive Load" labelEs="↓ Carga Cognitiva" es="Reducida a través de la divulgación progresiva en pasos — reemplazando una única pantalla densa con orientación contextual en cada momento.">
   Reduced through progressive disclosure across steps — replacing a single dense screen with contextual guidance at every moment.
 </InsightCard>
 
-**What this proved:** Behavior change doesn't always require a full product overhaul. Targeted copy improvements, progressive onboarding, and a clearer confirmation step moved the needle on both contact rate and NPS — within a single quarter.
+<T en="**What this proved:** Behavior change doesn't always require a full product overhaul. Targeted copy improvements, progressive onboarding, and a clearer confirmation step moved the needle on both contact rate and NPS — within a single quarter." es="**Lo que esto demostró:** El cambio de comportamiento no siempre requiere una renovación completa del producto. Mejoras puntuales en el copy, un onboarding progresivo y un paso de confirmación más claro movieron la aguja tanto en la tasa de contacto como en el NPS — en un solo trimestre." />
 
 ---
 

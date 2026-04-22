@@ -1,19 +1,27 @@
 "use client";
 
 import { TextRotate } from "@/components/ui/text-rotate";
+import { useI18n } from "@/lib/i18n";
 
 type CaseTextRotateProps = {
   texts: string; // pipe-separated list: "Text one|Text two|Text three"
+  textsEs?: string;
   label?: string;
+  labelEs?: string;
   rotationInterval?: string; // ms as string for MDX compat
 };
 
 export default function CaseTextRotate({
   texts,
+  textsEs,
   label = "What users were asking",
+  labelEs,
   rotationInterval = "2800",
 }: CaseTextRotateProps) {
-  const items = texts
+  const { locale } = useI18n();
+  const activeTexts = locale === "es" && textsEs ? textsEs : texts;
+  const activeLabel = locale === "es" && labelEs ? labelEs : label;
+  const items = activeTexts
     .split("|")
     .map((t) => t.trim())
     .filter(Boolean);
@@ -22,7 +30,7 @@ export default function CaseTextRotate({
     <div className="relative my-10 rounded-2xl border border-border-subtle bg-white/60 backdrop-blur-sm overflow-hidden px-8 py-10 flex flex-col items-center gap-4">
       {/* Label */}
       <span className="font-sans text-[11px] font-medium uppercase tracking-widest text-text-secondary/60">
-        {label}
+        {activeLabel}
       </span>
 
       {/* Rotating text */}

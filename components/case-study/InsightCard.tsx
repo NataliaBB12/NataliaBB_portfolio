@@ -3,8 +3,11 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { InsightCardProps } from "@/lib/types";
+import { useI18n } from "@/lib/i18n";
 
-export default function InsightCard({ label, children, accent }: InsightCardProps) {
+export default function InsightCard({ label, labelEs, children, es, accent }: InsightCardProps & { labelEs?: string; es?: string }) {
+  const { locale } = useI18n();
+  const displayLabel = locale === "es" && labelEs ? labelEs : label;
   const cardRef = useRef<HTMLDivElement>(null);
 
   const mouseX = useMotionValue(0.5);
@@ -67,10 +70,10 @@ export default function InsightCard({ label, children, accent }: InsightCardProp
       {/* Content */}
       <div className="relative z-10">
         <span className="font-sans text-[11px] font-medium uppercase tracking-widest text-text-secondary/70 block mb-2">
-          {label}
+          {displayLabel}
         </span>
         <div className={`font-sans text-lg font-semibold text-text-primary ${accent ? "[&_strong]:text-accent-coral [&_strong]:font-bold" : ""}`}>
-          {children}
+          {locale === "es" && es ? es : children}
         </div>
       </div>
     </motion.div>
