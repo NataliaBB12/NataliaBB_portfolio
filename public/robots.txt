@@ -1,0 +1,45 @@
+# robots.txt for https://natalia.design
+# https://www.rfc-editor.org/rfc/rfc9309
+
+# Default: allow all search crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# GPTBot (OpenAI) — allow search, deny training
+User-agent: GPTBot
+Disallow: /
+
+# OAI-SearchBot (OpenAI search) — allow indexing
+User-agent: OAI-SearchBot
+Allow: /
+
+# Claude-Web (Anthropic search)
+User-agent: Claude-Web
+Allow: /
+
+# Anthropic AI
+User-agent: Anthropic-AI
+Allow: /
+
+# Google-Extended (Gemini, Vertex AI) — allow search, deny training
+User-agent: Google-Extended
+Disallow: /
+
+# PerplexityBot — allow
+User-agent: PerplexityBot
+Allow: /
+
+# CCBot (Common Crawl, used for LLM training) — deny
+User-agent: CCBot
+Disallow: /
+
+# Bytespider (TikTok/ByteDance) — deny training
+User-agent: Bytespider
+Disallow: /
+
+# Content Signals — declare AI usage preferences
+# https://contentsignals.org/
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+Sitemap: https://natalia.design/sitemap.xml

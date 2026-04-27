@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://natalia.design"),
   title: "Natalia Bustos — Product Designer",
   description:
     "Product Designer with 5 years of experience in B2C and B2B, focused on scalable, user-centered solutions.",
