@@ -21,7 +21,7 @@ export default function Hero() {
   const { t } = useI18n();
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 lg:px-24">
+    <section className="relative min-h-screen flex flex-col justify-start md:justify-center px-6 lg:px-24 pt-28 md:pt-0">
       <motion.div
         variants={container}
         initial="hidden"
