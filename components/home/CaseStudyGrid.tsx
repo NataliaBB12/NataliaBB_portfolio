@@ -72,7 +72,7 @@ export default function CaseStudyGrid({
                 {/* Info area */}
                 <div className="md:w-[55%] bg-white p-8 md:p-10 lg:p-12 flex flex-col justify-center">
                   {/* Client label */}
-                  <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-text-secondary/50 mb-3">
+                  <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-text-secondary/70 mb-3">
                     {cs.client}
                   </span>
 
@@ -84,7 +84,7 @@ export default function CaseStudyGrid({
                     {cs.tags?.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[11px] font-medium text-text-secondary/70 border border-text-primary/8 px-3 py-1 rounded-full"
+                        className="text-[11px] font-medium text-text-secondary border border-text-primary/20 px-3 py-1 rounded-full"
                       >
                         {tag}
                       </span>

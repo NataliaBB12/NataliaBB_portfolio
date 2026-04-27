@@ -7,7 +7,7 @@ export default function Manifesto() {
   const { t } = useI18n();
 
   return (
-    <section className="relative px-6 lg:px-24 pt-24 pb-16 overflow-hidden">
+    <section className="relative px-6 lg:px-24 pt-24 pb-16 overflow-hidden overflow-x-hidden">
       {/* Gradient glow — organic peach->pink->lavender blob */}
       <motion.div
         animate={{ scale: [1, 1.06, 1], rotate: [0, 2, 0] }}
@@ -52,8 +52,7 @@ export default function Manifesto() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-sans font-normal text-text-primary mb-6"
-          style={{ fontSize: "146px", lineHeight: 1 }}
+          className="font-sans font-normal text-text-primary mb-6 text-[44px] sm:text-[64px] md:text-[96px] lg:text-[120px] xl:text-[146px] leading-none"
         >
           {t.manifesto.title}
           <br />
