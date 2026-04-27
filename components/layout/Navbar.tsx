@@ -93,35 +93,23 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile — toggle + hamburger */}
+        {/* Mobile — toggle + hamburger (only when drawer is closed) */}
         <div className="flex md:hidden items-center gap-3">
           <LanguageToggle />
           <button
             className="relative w-10 h-10 flex items-center justify-center"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMobileOpen(true)}
+            aria-label="Open menu"
             aria-expanded={mobileOpen}
           >
-            <span
-              className={`absolute block h-[1.5px] w-5 bg-text-primary transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                mobileOpen ? "rotate-45" : "-translate-y-[5px]"
-              }`}
-            />
-            <span
-              className={`absolute block h-[1.5px] bg-text-primary transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                mobileOpen ? "w-0 opacity-0" : "w-3.5 opacity-100"
-              }`}
-            />
-            <span
-              className={`absolute block h-[1.5px] w-5 bg-text-primary transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                mobileOpen ? "-rotate-45" : "translate-y-[5px]"
-              }`}
-            />
+            <span className="absolute block h-[1.5px] w-5 bg-text-primary -translate-y-[5px]" />
+            <span className="absolute block h-[1.5px] w-3.5 bg-text-primary" />
+            <span className="absolute block h-[1.5px] w-5 bg-text-primary translate-y-[5px]" />
           </button>
         </div>
       </div>
 
-      {/* Mobile fullscreen menu */}
+      {/* Mobile fullscreen menu — z-[60] so it sits above the navbar band */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -129,9 +117,19 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[45] md:hidden"
+            className="fixed inset-0 z-[60] md:hidden"
             style={{ backgroundColor: "#FDF6F0" }}
           >
+            {/* Close button — top-right, always visible */}
+            <button
+              className="absolute top-5 right-6 w-10 h-10 flex items-center justify-center"
+              onClick={() => setMobileOpen(false)}
+              aria-label="Close menu"
+            >
+              <span className="absolute block h-[1.5px] w-5 bg-text-primary rotate-45" />
+              <span className="absolute block h-[1.5px] w-5 bg-text-primary -rotate-45" />
+            </button>
+
             <div className="flex flex-col justify-center items-center h-full gap-1">
               {navLinks.map((link, i) => (
                 <motion.div
@@ -152,7 +150,7 @@ export default function Navbar() {
                     className={`block text-3xl font-normal py-4 px-8 transition-colors duration-300 ${
                       isActive(link.href)
                         ? "text-text-primary"
-                        : "text-text-secondary/50 hover:text-text-primary"
+                        : "text-text-secondary hover:text-text-primary"
                     }`}
                     onClick={() => setMobileOpen(false)}
                   >
@@ -163,7 +161,7 @@ export default function Navbar() {
                         height="14"
                         viewBox="0 0 10 10"
                         fill="none"
-                        className="inline-block ml-2 -mt-1 opacity-30"
+                        className="inline-block ml-2 -mt-1 opacity-50"
                       >
                         <path
                           d="M3 1h6v6M9 1L1 9"
@@ -187,7 +185,7 @@ export default function Navbar() {
               >
                 <a
                   href="mailto:natalia.bustosbonfil@gmail.com"
-                  className="text-[13px] text-text-secondary/40 hover:text-accent-coral transition-colors duration-300 tracking-wide"
+                  className="text-[13px] text-text-secondary/60 hover:text-accent-coral transition-colors duration-300 tracking-wide"
                 >
                   natalia.bustosbonfil@gmail.com
                 </a>
